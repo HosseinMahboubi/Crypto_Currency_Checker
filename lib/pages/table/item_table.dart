@@ -10,8 +10,8 @@ class ItemTable extends StatelessWidget {
     super.key,
   });
 
-  // Get the crypto controller
-  final CryptoController _cryptoController = Get.put(CryptoController());
+  // Get the crypto controller using Get.find() instead of Get.put() to avoid double initialization
+  final CryptoController _cryptoController = Get.find<CryptoController>();
 
   @override
   Widget build(BuildContext context) {
